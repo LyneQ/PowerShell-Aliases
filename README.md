@@ -44,6 +44,22 @@ The `Microsoft.PowerShell_profile.ps1` file is typically located in the followin
 
 If the file does not exist, you can create it manually in the specified directory.
 
+## Updating PowerShell
+
+To ensure better compatibility, it is recommended to update PowerShell to the latest version. Follow these steps:
+
+1. **Download the latest version of PowerShell**:
+    Visit the [PowerShell GitHub releases page](https://github.com/PowerShell/PowerShell/releases) and download the latest stable release for your operating system.
+
+2. **Install PowerShell**:
+    Follow the installation instructions provided on the GitHub releases page for your specific operating system.
+
+3. **Verify the installation**:
+    Open a new PowerShell session and run the following command to verify the version:
+    ```powershell
+    $PSVersionTable.PSVersion
+    ```
+
 ## Usage
 
 ### Directory Shortcuts
