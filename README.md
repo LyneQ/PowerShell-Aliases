@@ -95,7 +95,7 @@ To ensure better compatibility, it is recommended to update PowerShell to the la
 
 ### Git Shortcuts
 
-- **Display Git help**:
+- **Display help for All git shortcut alias**:
     ```sh
     gth
     ```
