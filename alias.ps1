@@ -1,4 +1,4 @@
-Add PowerShell aliases and functions for directory navigation, IDE shortcuts, and Git commands
+#Add PowerShell aliases and functions for directory navigation, IDE shortcuts, and Git commands
 # functions definition
 
 ## Directory shortcuts
@@ -21,10 +21,21 @@ function Global:Clear-and-show-Directory {
     Get-ChildItem -Force
 }
 
+
 ## IDE shortcuts
 
 function Global:Open-With-Webstorm {
-    Start-Process -FilePath "$env:USERPROFILE\AppData\Local\Programs\WebStorm\bin\webstorm64" -ArgumentList $args
+    Start-Process -FilePath "C:\Program Files\JetBrains\WebStorm 2024.1.5\bin\webstorm64" -ArgumentList $args
+
+}
+
+function Global:NeoVim {
+
+    param (
+        [string]$Path
+    )
+
+    nvim $Path
 }
 
 ## Git shortcuts
@@ -74,6 +85,9 @@ Set-Alias -Name "cls" -Value "Clear-and-show-Directory" -Scope Global
 
 # open file with webstorm
 Set-Alias -Name "ws" -Value "Open-With-Webstorm" -Scope Global
+
+# NeoVim shortcuts
+Set-Alias -name "vi" -Value "NeoVim"
 
 # Git shortcuts
 Set-Alias -Name "gth" -Value "Git-Help" -Scope Global
