@@ -26,12 +26,17 @@ Welcome to my personal collection of useful PowerShell aliases and functions des
     cd PowerShell-Aliases
     ```
 
-3. **Copy the `alias.ps1` file to your PowerShell profile directory**:
+3. **Install required modules**:
+    ```powershell
+    Install-Module -Name Get-ChildItemColor -Scope CurrentUser
+    ```
+
+4. **Copy the `alias.ps1` file to your PowerShell profile directory**:
     ```sh
     cp alias.ps1 $PROFILE.CurrentUserAllHosts
     ```
 
-4. **Source the aliases file**:
+5. **Source the aliases file**:
     Add the following line to your `Microsoft.PowerShell_profile.ps1`:
     ```powershell
     . ($PSScriptRoot + "\alias.ps1")
@@ -91,6 +96,11 @@ To ensure better compatibility, it is recommended to update PowerShell to the la
 - **Open current directory with WebStorm**:
     ```sh
     ws
+    ```
+
+- **Open file with NeoVim**:
+    ```sh
+    vi <file_path>
     ```
 
 ### Git Shortcuts
