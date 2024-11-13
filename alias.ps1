@@ -26,7 +26,7 @@ function Global:List-All {
 ## Command shortcuts
 function Global:Clear-and-show-Directory {
     Clear-Host
-    List-All
+    Get-ChildItemColorFormatWide -Force -TrailingSlashDirectory
 }
 ## IDE shortcuts
 function Global:Open-With-Webstorm {
@@ -69,8 +69,14 @@ function Global:Git-Push {
 function Global:Git-Pull {
     git pull
 }
+function Global:Powershell-Edit-Alias {
+    nvim ($PSScriptRoot + "\alias.ps1")
+}
 
 # Create an alias for the functionn
+## powershell editing
+Set-Alias -Name "pwslconfig" -Value "Powershell-Edit-Alias" -Scope Global
+
 ## list directories
 Set-Alias -Name "lsd" -Value "List-Directories" -Scope Global
 Set-Alias -Name "lsf" -Value "List-Files" -Scope Global
